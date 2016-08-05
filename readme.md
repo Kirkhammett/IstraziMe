@@ -2,7 +2,7 @@
 
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Zapoznaj.Me is a Laravel based web app which displays a list archaeological locations based in Macedonia, as well as details, ticket costs and photographs
+Istrazi.Me is a Laravel based web app which displays a list archaeological locations based in Macedonia, as well as details, ticket costs and photographs
 for each individual location.
 
 ## Usage
