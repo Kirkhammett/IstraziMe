@@ -46,7 +46,7 @@
                 <article class="post" data-postid="{{ $comment->id }}">
                     <p>{{ $comment->commentBody  }}</p>
                     <div class="info">
-                        Posted by {{ $comment->users->name}} on {{ $comment->created_at }}
+                        Posted by {{ $comment->users->name}} on {{ date('F d, Y, h:m', strtotime($comment->created_at))}} 
                     </div>
                     <div class="interaction">
                         @if(Auth::user()->id == $comment->user_id)
