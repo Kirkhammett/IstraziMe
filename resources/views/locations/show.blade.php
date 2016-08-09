@@ -3,7 +3,18 @@
 @section('content')
 <div class="container">
     <h2 class="h1">{{ $location->name }}</h2>
-
+    @if($location->locality)
+    <p>Info: {{$location->locality->loc_info}}</p>
+    <p>Istorija: {{$location->locality->loc_history}}</p>
+    <p>Cena: {{$location->locality->price}}</p>
+    <p>Cena Grupa: {{$location->locality->price_group}}</p>
+    <p>Cena Dete: {{$location->locality->price_child}}</p>
+    <p>Latitude: {{$location->locality->lat}}</p>
+    <p>Longitude: {{$location->locality->long}}</p>
+    <img src="{{ URL::to('src/img/' . $location->name  . '/picture1.jpg') }}">
+    @endif
+    <br>
+    <br>
     @if(Session::has('message'))
         <div class="row">
             <div class="alert alert-success col-md-4 col-md-offset-4 text-center">
@@ -15,7 +26,7 @@
     <section class="row new-post">
         <div class="col-md-6 col-md-offset-3">
             <header><h3>What do you have to say?</h3></header>
-            <form action="{{ route('comment.create', ['loca_id' => $location->id])  }}" method="post">
+            <form action="{{ route('comment.create', ['loc_id' => $location->id])  }}" method="post">
                 <div class="form-group">
                     <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your Post"></textarea>
                 </div>
