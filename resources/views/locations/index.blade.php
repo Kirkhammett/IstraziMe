@@ -7,21 +7,32 @@
     @if ( !$locations->count() )
         You have no locations.
     @else
-        <div class="row">
+        <div class="row hide-mobile">
             @foreach( $locations as $location )
-                <div class="col-xs-2 col-md-4 text-center thumbnail locations-grid"
-                     style="background-image: url('{{ URL::to('src/img/' . $location->name  . '/picture1.jpg') }}');">
-
-                    <a href="{{ route('locations.show', ['slug' => $location->slug]) }}" class="on-hover">
-                        <div class=" loc-box  ">
-
+                <a href="{{ route('locations.show', ['slug' => $location->slug]) }}" class="on-hover">
+                    <div class="col-md-4 margin-bottom-2">
+                        <div class="col-md-12 well text-center thumbnail locations-grid" style="background-image: url('{{ URL::to('src/img/' . $location->name  . '/picture1.jpg') }}');">
+                            <div class="caption">
+                                <h4>{{ $location->name }}</h4>
+                            </div>
                         </div>
-                    </a>
-                </div>
-
-
+                    </div>
+                </a>
             @endforeach
         </div>
+
+        <div class="row show-mobile">
+            @foreach( $locations as $location )
+                <a href="{{ route('locations.show', ['slug' => $location->slug]) }}" class="on-hover">
+                    <div class="margin-bottom-2 col-md-12 well text-center thumbnail locations-grid" style="background-image: url('{{ URL::to('src/img/' . $location->name  . '/picture1.jpg') }}');">
+                        <div class="caption">
+                            <h4>{{ $location->name }}</h4>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+
     @endif
     </div>
 @endsection
