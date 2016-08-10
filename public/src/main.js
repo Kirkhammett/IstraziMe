@@ -5,8 +5,10 @@
  */
 
 // jQuery to collapse the navbar on scroll
+/*
+var vp_width = $(window).width();
 function collapseNavbar() {
-    if ($(".navbar").offset().top > 50) {
+    if ($(".navbar").offset().top > 50 && vp_width > 768) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
         $(".dropdown-menu").addClass("dropdown-menu-black");
         $(".dropdown-menu").removeClass("dropdown-menu-transparent");
@@ -16,9 +18,11 @@ function collapseNavbar() {
     }
 }
 
+
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
+*/
 $(document).ready(function () {
     $(".on-hover").hover(
         function () {

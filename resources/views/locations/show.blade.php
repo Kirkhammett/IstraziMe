@@ -11,7 +11,7 @@
     <p>Cena Dete: {{$location->locality->price_child}}</p>
     <p>Latitude: {{$location->locality->lat}}</p>
     <p>Longitude: {{$location->locality->long}}</p>
-    <img src="{{ URL::to('src/img/' . $location->name  . '/picture1.jpg') }}">
+    <img width="50%" src="{{ URL::to('src/img/' . $location->name  . '/picture1.jpg') }}">
     @endif
     <br>
     <br>
