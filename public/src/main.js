@@ -4,6 +4,41 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ function changeSliderCap()
+ {
+    //console.log("called");
+    var width = Math.sqrt($(".slider-p").width() * $(".slider-p").height());
+    var sqrt2 = Math.sqrt(2);
+    //$(".pozadina-p").height(width);
+    //$(".pozadina-p").width(width);
+    $(".slider-caption").width(sqrt2 * width);
+    $(".slider-caption").height(sqrt2 * width);
+ }
+
+
+$(window).resize(changeSliderCap())
+
+ // Dynamically change the caption width depending on the inner text, has issues atm.
+/*
+ function changeSliderCap()
+ {
+    console.log("called");
+    var width = Math.sqrt($(".slider-p").width() * $(".slider-p").height());
+    var sqrt2 = Math.sqrt(2);
+    $(".pozadina-p").height(width);
+    $(".pozadina-p").width(width);
+    $(".slider-caption").width(sqrt2 * width);
+    $(".slider-caption").height(sqrt2 * width);
+ }
+
+changeSliderCap();
+
+$(window).resize(function()
+{
+    changeSliderCap();
+});
+*/
+
 // jQuery to collapse the navbar on scroll
 /*
 var vp_width = $(window).width();
