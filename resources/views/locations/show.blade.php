@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container-fluid">
-        <div class="row " >
-            <div class="obikolka">
+        <div class="row">
+            <div class="envelop">
                 <div id="carousel-example-generic"class="carousel slide " data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -16,14 +15,13 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="">
                         <div class="item active">
-                            <img src="{{URL::to('src/img/Herakleja/herakleja1test.jpg')}}" alt="...">
-
+                            <img src="{{ URL::to('/src/img/' . $location->slug ,'/1.jpg') }}" >
                         </div>
                         <div class="item">
-                            <img src="{{URL::to('src/img/Herakleja/herakleja2.jpg')}}"  alt="...">
+                            <img src="{{ URL::to('/src/img/' . $location->slug ,'/2.jpg') }}" >
                         </div>
                         <div class="item">
-                            <img src="{{URL::to('src/img/Herakleja/herakleja3.jpg')}}"  alt="...">
+                            <img src="{{ URL::to('/src/img/' . $location->slug ,'/3.jpg') }}" >
                         </div>
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -36,10 +34,10 @@
                     </a>
                 </div>
 
-                <div class="glaventekst row slider-caption">
-                    <h4 class="h1 h-klasa text-center" style="padding-top: 15px">{{ $location->name }}</h4>
-                    <hr class="hrklasa">
-                    <p class="slider-p"> <b>Хераклеја Линкестис e градска населба од старомакедонско време до средниот век. Основана е кон средината на IV век пред н.е. од страна на кралот Филип II Македонски, како важен стратегиски пункт. Остатоците од материјалната култура од старомакедонската фаза на животот археолошки не се доволно истражени.Хераклеја Линкестис се наоѓа на јужната периферија на градот Битола, во подножјето на планината Баба. Линкестис доаѓа од називот на регионот Линкестида во кој се наоѓал градот, а во кој живеело древното македонско племе Линкестиди. Сместена во плодна рамнина, од север заштитена од планината Баба, односно ридот Тумбе Кафе и реката Сива Вода на југ, Хераклеја опстојала и се развила во една значајна раскрсница на патот Виа Игнација (лат. Via Ignatia) кој ги поврзувал Драч и Босфор. Од Хераклеја патот дијагонално се протегал кон Стоби, а потоа кон Сердика - денешна Софија. </b>
+                <div class="row slider-caption">
+                    <h4 class="h1 h-class text-center" style="padding-top: 15px">{{ $location->name }}</h4>
+                    <hr class="hr-class">
+                    <p class="slider-p"> <b>{{ $location->locality->loc_info }}</b>
                     </p>
                 </div>
             </div>
@@ -49,19 +47,69 @@
         <br>
         <br>
 
-
-        <div class="row info-row">
-            <div class="info-klasa">
-                <h3 class="text-center h-klasa" >Информации</h3>
-                <hr class="hrklasa2">
-                <p class="information-p" style="color: white" >  <b> Доколку сте заинтересирани, локалитетот можете да го посетите секој ден од 08:00 до 16:00 часот. Влезницата за домашни туристи е 50 денари, за странски е 100 денари, а за деца 20 денари. За поголеми групни посети може да се обезбеди разгледување со туристички водич. </b> </p>
-
+        <div class="row">
+            <div class="history">
+                <h3 class="text-center h-class" >Историја <hr class="hr-class2"></h3>
+                <p class="information-p" style="color: white">
+                <b>{{$location->locality->loc_info}}</b>
+                </p>
             </div>
         </div>
 
+        <div class="row info-row">
+            <div class="info-class">
+                <h3 class="text-center h-class" >Информации 
+                <h4 class="text-center h-class"> {{ $location->name }} </h4> 
+                <hr class="hr-class2"></h3>
+                <p class="information-p" style="color: white" >
+                    <b>{{$location->locality->loc_history}}</b> 
+                </p>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <header><h3 class="text-center h-class">Локација</h3></header>
+               <hr class="hr-class3">
+               <div id="gmap"></div>
+           </div>
+           <div class="col-lg-6 col-md-6 col-sm-12">
+              <header><h3 class="text-center h-class">Ценовник</h3></header>
+              <hr class="hr-class3" >
+              <div class="col-md-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-10 col-lg-10 col-sm-10">
+                 <div class="media">
+                    <div class="media-left media-middle">
+                        <img class="media-object" src="http://placehold.it/32x32" alt="...">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Стандардна цена:</h4>
+                        <p>Стандардната цена за лица над 10 години е: <span class="badge">{{$location->locality->price}} денари. </span> </p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img class="media-object" src="http://placehold.it/32x32" alt="...">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Групна цена:</h4>
+                        <p>Цена за група од 3 до 5 лица е: <span class="badge">{{$location->locality->price_group}} денари. </span> </p>
+                    </div>
+                </div> 
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img class="media-object" src="http://placehold.it/32x32" alt="...">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Цена за деца:</h4>
+                        <p>Цената за деца до 10 години е: <span class="badge">{{$location->locality->price_child}} денари. </span> </p>
+                    </div>
+                </div>         
+               </div>
+            </div>
+        </div>
+        <div style="height:50px;" id="getmsg"></div>
         @if(Session::has('message'))
-            <div class="row">
+            <div style="margin-top: 30px;" class="row">
                 <div class="alert alert-success col-md-4 col-md-offset-4 text-center">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     {{Session::get('message')}}
@@ -70,9 +118,9 @@
         @endif
         <section class="row new-post">
             <div class="col-md-6 col-md-offset-3">
-                <header><h3 class="text-center h-klasa">Споделете ги вашите импресии </h3></header>
-                <hr class="hrklasa3" >
-                <form action="{{ route('comment.create', ['loca_id' => $location->id])  }}" method="post">
+                <header><h3 class="text-center h-class">Споделете ги вашите импресии </h3></header>
+                <hr class="hr-class3" >
+                <form action="{{ route('comment.create', ['loca_id' => $location->id])  }}#getmsg" method="post">
                     <div class="form-group">
                         <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Ваш коментар.."></textarea>
                     </div>
@@ -86,22 +134,24 @@
 
         <section class="row posts">
             <div class="col-md-6 col-md-offset-3 inner-kom">
-                <header><h3 class="text-center h-klasa" style="color: #2C2C2C">Коментари</h3></header>
-                <hr class="hrklasa3">
+                <header><h3 class="text-center h-class" style="color: #2C2C2C">Коментари</h3></header>
+                <hr class="hr-class3">
                 <br>
                 @if ( !$location->comments->count() )
-                    Оваа локација нема во моментов коментари.
+                    <p class="text-center"> Оваа локација нема во моментов коментари. </p>
+                    <br>
+                    <br>
                 @else
                     @foreach( $location->comments->sortByDesc('created_at') as $comment )
                         <article class="post" data-postid="{{ $comment->id }}">
-                            <p class="komentar-p">{{ $comment->commentBody  }}</p>
+                            <p class="comment-p">{{ $comment->commentBody  }}</p>
                             <div class="info a-klasa">
                                 Од  <b>{{ $comment->users->name}} </b> на {{ date('F d, Y во h:m', strtotime($comment->created_at))}} 
                             </div>
                             <div class="interaction">
                                 @if(Auth::user()->id == $comment->user_id)
                                     <a href="#" class="edit">Промени</a> |
-                                    <a href="{{ route('comment.delete', ['comment_id' => $comment->id]) }}">Избриши</a>
+                                    <a href="{{ route('comment.delete', ['comment_id' => $comment->id]) }}#getmsg">Избриши</a>
                                 @endif
                             </div>
                         </article>
@@ -111,5 +161,31 @@
         @endif
     </div>
     <div class="push"></div>
+    <script type="text/javascript" 
+    src="http://maps.google.com/maps/api/js?key=AIzaSyCJOw22XT7GbQ5m5UfLRjPO_bu5fjSyUlA"></script>
+    <script type="text/javascript"> 
+    function initialize() 
+    {
 
+        var location = new google.maps.LatLng({{ $location->locality->lat }}, {{ $location->locality->long }});
+
+        var params = {
+         zoom: 16,
+         center: location,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+         };
+
+        var map = new google.maps.Map(document.getElementById("gmap"), params);
+
+        var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        });
+
+        marker.setMap(map);
+    }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+</script> 
 @endsection

@@ -22,8 +22,8 @@ class CreateLocalitiesTable extends Migration
             $table->integer('price')->unsigned()->default(0);
             $table->integer('price_group')->unsigned()->default(0);
             $table->integer('price_child')->unsigned()->default(0);
-            $table->float('lat');
-            $table->float('long');
+            $table->double('lat');
+            $table->double('long');
             $table->timestamps();
         });
     }

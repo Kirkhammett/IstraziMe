@@ -26,7 +26,7 @@ class CommentController extends Controller
         $comment->location_id = $loc_id;
         $message = 'There was an error while posting your comment.';
         if ($request->user()->comments()->save($comment)) {
-            $message = 'Comment successfully posted!';
+            $message = 'Коментарот е успешно постиран.';
         }
         return redirect()->back()->with(['message' => $message]);
     }
@@ -38,7 +38,7 @@ class CommentController extends Controller
             return redirect()->back();
         }
         $comment->delete();
-        return redirect()->back()->with(['message' => 'Comment successfully deleted!']);
+        return redirect()->back()->with(['message' => 'Коментарот е успешно избришан.']);
     }
 
     public function show(Location $location, Comment $comment)

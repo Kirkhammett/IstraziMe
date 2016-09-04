@@ -15,7 +15,6 @@
     $(".slider-caption").height(sqrt2 * width);
  }
 
-
 $(window).resize(changeSliderCap())
 
  // Dynamically change the caption width depending on the inner text, has issues atm.
@@ -59,6 +58,7 @@ $(document).ready(collapseNavbar);
 
 */
 $(document).ready(function () {
+    $(".wrapper").css("visibility","visible");
     $(".on-hover").hover(
         function () {
             $(this).find(".caption").css("background-color", "rgba(10, 172, 167, 1)");

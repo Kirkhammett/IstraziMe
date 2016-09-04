@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-    <h2>Locations</h2>
+    <h2>Локалитети</h2>
 
     @if ( !$locations->count() )
         You have no locations.

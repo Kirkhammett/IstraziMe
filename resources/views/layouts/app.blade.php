@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Istrazi.Me</title>
 
     <!-- Fonts -->
@@ -24,7 +23,8 @@
                     <i class="fa fa-bars" style="color: white"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="{{ url('/') }}">
-                    <i class="fa fa-play-circle"></i>  <span class="light">ISTRAZI</span> ME
+                    <img style="display:inline-block;margin-top:-7px;" src="{{ URL::to('logo/logo-32.png') }}"></img>
+                    <span class="light">ISTRAZI</span> ME
                 </a>
             </div>
 
@@ -36,16 +36,16 @@
                         <a href="#page-top"></a>
                     </li>
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Најава</a></li>
+                        <li><a href="{{ url('/register') }}">Регистрација</a></li>
                     @else
-                        <li><a href="{{ url('/locations') }}">Lokacii</a></li>
+                        <li><a href="{{ url('/locations') }}">Локалитети</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-black" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Одјава</a></li>
                             </ul>
                         </li>
                     @endif
@@ -57,7 +57,7 @@
     @yield('content')
     </div>
     <footer class="footer">
-        <p class="text-center"> IstrazimeTeam &copy; 2016 | All Rights Reserved</p>
+        <p class="text-center"> Istrazime Team &copy; 2016 | All Rights Reserved</p>
     </footer>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
