@@ -59,7 +59,7 @@ class LocationTableSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'name' => 'Stobi',
+                'name' => 'Стоби',
                 'slug' => 'stobi',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime

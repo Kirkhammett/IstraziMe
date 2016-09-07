@@ -310,7 +310,8 @@ input[type="datetime"]
 .info-class{
     box-shadow: 5px 5px 5px #888888;
     margin-bottom: 50px;
-    padding-top: 20px;
+    padding: 20px 20% 35px 20%;
+    text-align: justify;
     background-color: #0AACA7;
     color: white;
 }
