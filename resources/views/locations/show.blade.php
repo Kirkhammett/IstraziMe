@@ -111,7 +111,7 @@
                </div>
             </div>
         </div>
-        <div style="height:50px;" id="getmsg"></div>
+        <div style="height:50px;" id="comments"></div>
         @if(Session::has('message'))
             <div style="margin-top: 30px;" class="row">
                 <div class="alert alert-success col-md-4 col-md-offset-4 text-center">
@@ -124,7 +124,7 @@
             <div class="col-md-6 col-md-offset-3">
                 <header><h3 class="text-center h-class">Споделете ги вашите импресии </h3></header>
                 <hr class="hr-class3" >
-                <form action="{{ route('comment.create', ['loca_id' => $location->id])  }}#getmsg" method="post">
+                <form action="{{ route('comment.create', ['loca_id' => $location->id])  }}#comments" method="post">
                     <div class="form-group">
                         <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Ваш коментар.."></textarea>
                     </div>
@@ -155,7 +155,7 @@
                             <div class="interaction">
                                 @if(Auth::user()->id == $comment->user_id)
                                     <a href="#" class="edit">Промени</a> |
-                                    <a href="{{ route('comment.delete', ['comment_id' => $comment->id]) }}#getmsg">Избриши</a>
+                                    <a href="{{ route('comment.delete', ['comment_id' => $comment->id]) }}#comments">Избриши</a>
                                 @endif
                             </div>
                         </article>

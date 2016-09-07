@@ -38,8 +38,7 @@ class CreateLocationsAndCommentsTables extends Migration
      */
     public function down()
     {
-        Schema::drop('locations');
         Schema::drop('comments');
-      
+        Schema::drop('locations');
     }
 }
