@@ -1,17 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Welcome</div>
+<div class=" landing container-fluid">
 
-                <div class="panel-body">
-                    Your Application's Landing Page.
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1 class="naslov-landing"> Истражете ги убавините на Македонија </h1>
+     <img src="{{URL::asset('/src/img/mak2.jpg')}}"height="525px" width="100%" class="slika-landing">
 </div>
+
 @endsection
