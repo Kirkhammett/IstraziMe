@@ -314,6 +314,7 @@ input[type="datetime"]
     text-align: justify;
     background-color: #0AACA7;
     color: white;
+    font-size: large;
 }
 
 .visit{
@@ -362,7 +363,7 @@ input[type="datetime"]
 .information-p{
     font-size: 1em;
     color: #555c5e;
-    text-align: justify-all;
+    text-align: justify;
     padding: 0px 15px 35px 15px;
 }
 
@@ -394,6 +395,18 @@ input[type="datetime"]
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
+
+    .info-class-mobile {
+        padding: 20px 10% 35px 10%;
+        font-size: x-small;
+    }
+
+    .information-p-mobile{
+        padding: 0 12% 35px 12%;
+        font-size: x-small;
+    }
+
+
 
 }
 

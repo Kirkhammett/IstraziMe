@@ -48,22 +48,26 @@
         <br>
 
         <div class="row">
-            <div class="history">
-                <h3 class="text-center h-class" >Историја <hr class="hr-class2"></h3>
-                <p class="information-p" style="color: white">
-                <b>{{$location->locality->loc_info}}</b>
-                </p>
+            <div class="col-md-12">
+                <div class="history">
+                    <h3 class="text-center h-class" >Историја <hr class="hr-class2"></h3>
+                    <p class="information-p information-p-mobile" style="color: white">
+                    <b>{{$location->locality->loc_info}}</b>
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="row info-row">
-            <div class="info-class">
-                <h3 class="text-center h-class" >Информации 
-                <h4 class="text-center h-class"> {{ $location->name }} </h4> 
-                <hr class="hr-class2"></h3>
-                <p class="information-p" style="color: white" >
-                    <b>{{$location->locality->loc_history}}</b> 
-                </p>
+            <div class="col-md-12">
+                <div class="info-class info-class-mobile ">
+                    <h3 class="text-center h-class" >Информации
+                    <h4 class="text-center h-class"> {{ $location->name }} </h4>
+                    <hr class="hr-class2"></h3>
+                    <p class="information-p " style="color: white" >
+                        <b>{{$location->locality->loc_history}}</b>
+                    </p>
+                </div>
             </div>
         </div>
 
