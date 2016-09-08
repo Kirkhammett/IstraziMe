@@ -511,43 +511,43 @@ p {
     min-height: 0 !important;
 
 }
-.naslov-landing{
+.title-landing{
     position: relative;
     top:380px;
     color: whitesmoke;
-    margin-left: 40px;
+    margin-left: 80px;
 
 
 }
 .slika-landing{
     margin-top: -120px;
 }
-.p-impresija{
+.p-imp{
     margin-left: 33px;
     font-size: 1.7em;
     text-align: justify-all;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
 }
-.p-impresija2{
+.p-imp2{
     margin-left: 33px;
     font-size: 1.3em;
     margin-top: 10px;
 
 }
-.informacii{
+.informations{
     background-color:#0AACA7;
     color: whitesmoke;
     padding: 40px;
 }
-.informacii > p,h3{
+.informations > p,h3{
     padding-left: 40px;
 }
-.kopce{
+.buton{
     background-color: whitesmoke;
     border-color: transparent;
     color: #0AACA7;
 }
-.kopce:hover{
+.buton:hover{
     background-color: #2C2C2C;
     border-color: transparent;
     color: whitesmoke;
