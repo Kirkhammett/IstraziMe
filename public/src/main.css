@@ -302,6 +302,11 @@ input[type="datetime"]
     margin-right: 90px;
     border: solid 1px #0AACA7;
 }
+.hr-class4{
+    margin-left: 320px;
+    margin-right: 320px;
+    border: solid 1px #0AACA7;
+}
 
 .info-row{
     margin-top: -60px;
@@ -433,7 +438,10 @@ input[type="datetime"]
 {
     height: 90px;
 }
-
+.push2
+{
+    height: 290px;
+}
 .footer {
     margin-top: 20px;
     width: 100%;
@@ -513,4 +521,34 @@ p {
 }
 .slika-landing{
     margin-top: -120px;
+}
+.p-impresija{
+    margin-left: 33px;
+    font-size: 1.7em;
+    text-align: justify-all;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+}
+.p-impresija2{
+    margin-left: 33px;
+    font-size: 1.3em;
+    margin-top: 10px;
+
+}
+.informacii{
+    background-color:#0AACA7;
+    color: whitesmoke;
+    padding: 40px;
+}
+.informacii > p,h3{
+    padding-left: 40px;
+}
+.kopce{
+    background-color: whitesmoke;
+    border-color: transparent;
+    color: #0AACA7;
+}
+.kopce:hover{
+    background-color: #2C2C2C;
+    border-color: transparent;
+    color: whitesmoke;
 }
