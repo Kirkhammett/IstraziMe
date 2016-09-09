@@ -307,7 +307,16 @@ input[type="datetime"]
     margin-right: 320px;
     border: solid 1px #0AACA7;
 }
-
+.hr-class5{
+     margin-left: 20px;
+     margin-right: 20px;
+     border: solid 1px #0AACA7;
+ }
+.hr-class6{
+    margin-left: 270px;
+    margin-right: 100px;
+    border: solid 1px #0AACA7;
+}
 .info-row{
     margin-top: -60px;
     margin-bottom: 20px;
@@ -546,9 +555,42 @@ p {
     background-color: whitesmoke;
     border-color: transparent;
     color: #0AACA7;
+    border-radius: 0.2em;
+}
+.abuton{
+    color: whitesmoke;
+}
+.abuton:hover{
+    color: #0AACA7;
 }
 .buton:hover{
     background-color: #2C2C2C;
     border-color: transparent;
     color: whitesmoke;
+}
+.forma{
+    margin-left: 173px;
+
+}
+.txtarea{
+    margin: 30px 200px 30px 170px;
+}
+.formctrl{
+    border-color: white;
+    border-style: none;
+}
+.buton2{
+    background-color: #0AACA7;
+    border-color: transparent;
+    color: whitesmoke;
+    border-radius: 0.2em;
+}
+.buton2:hover{
+    background-color: #2C2C2C;
+    border-color: transparent;
+    color: #0AACA7;
+}
+
+.form-control{
+    border-radius: 0;
 }

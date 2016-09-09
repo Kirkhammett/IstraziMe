@@ -14,6 +14,31 @@
 <button class="btn btn-primary btn-lg buton text-center"> Истражувај </button>
 </div>
 <br>
+<div class="container-fluid">
+<div class = "col-md-3">
+<h2 class="text-center" >АДРЕСА</h2>
+<hr class="hr-class5">
+
+<p><b>ИстражиМЕ тим</b></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.8209442256452!2d21.407359215445023!3d42.00411817921236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13541443605a5d27%3A0x7ebef1bd69f11660!2sRugjer+Boshkovikj+16%2C+Skopje+1000%2C+Macedonia+(FYROM)!5e0!3m2!1sen!2s!4v1473427879242" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+ </div>
+<div class = "col-md-8">
+<h2 class="text-center" style="margin-left:170px;">КОНТАКТ</h2>
+<hr class="hr-class6" >
+<form class="form-inline forma">
+<div class="form-group">
+    <input type="email" class="form-control formctr" style="margin-left:10px;" id="exampleInputEmail3" placeholder="Име">
+     <input type="email" class="form-control" style="margin-left:40px;margin-right:40px;" id="exampleInputEmail3" placeholder="Email адреса">
+     <input type="email" class="form-control"  id="exampleInputEmail3" placeholder="Телефон">
+  </div>
+
+</form>
+  <textarea class="form-control txtarea" rows="8" style="width:635px;" placeholder="Порака"></textarea>
+ <a class="btn btn-primary buton2 btn-lg" href="mailto:contact@istrazime.com" style="text-decoration:none;margin-left:180px;" target="_top"> Испрати </a>
+</div>
+</div>
+<br>
+
 <h2 class="text-center">ПРЕПОРАКИ</h2>
 <hr class="hr-class4">
 <br>
