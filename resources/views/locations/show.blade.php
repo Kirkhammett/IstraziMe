@@ -4,6 +4,25 @@
     <div class="container-fluid">
         <div class="row">
             <div class="envelop">
+                <span class="breadcrumbs">
+                    @for($i = 0; $i <= count(Request::segments()); $i++)
+
+                    @if($i == 0 )
+                    <li><a href="/">Дома</a></li>
+                    @continue
+                    @endif
+
+                    @if($i == 1)
+                    <li><a href="{{URL::to('/' . Request::segment($i)) }}"> Локации</a></li>
+                    @continue
+                    @endif
+
+                    <li>
+                      <a href="{{ URL::to('/locations/' . Request::segment($i)) }}">{{$location->name}}</a>
+                  </li>
+
+                  @endfor
+              </span>
                 <div id="carousel-example-generic"class="carousel slide " data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -61,7 +80,7 @@
         <div class="row info-row">
             <div class="col-md-12">
                 <div class="info-class info-class-mobile ">
-                    <h3 class="text-center h-class" style="padding-left: 0" >Информации</h3>
+                    <h3 class="text-center h-class">Информации</h3>
                     <h4 class="text-center h-class"> {{ $location->name }} </h4>
                     <hr class="hr-class2"></h3>
                     <p class="information-p " style="color: white" >
@@ -138,7 +157,7 @@
 
         <section class="row posts">
             <div class="col-md-6 col-md-offset-3 inner-kom">
-                <header><h3 class="text-center h-class" style="color: #2C2C2C; padding-left: 0">Коментари</h3></header>
+                <header><h3 class="text-center h-class" style="color: #2C2C2C;">Коментари</h3></header>
                 <hr class="hr-class3">
                 <br>
                 @if ( !$location->comments->count() )

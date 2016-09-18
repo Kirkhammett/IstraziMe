@@ -77,6 +77,54 @@ input[type="datetime"]
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 }
 
+.breadcrumbs li { 
+  
+  font-size: 1em;
+  width: auto;
+  height: 2em;
+  text-align: center;
+  line-height: 1em;
+  border-radius: 0.5em;
+  background: #0aaca7;
+  margin: 2em 1em 1em 1em;
+  padding: .5em;
+  display: inline-block;
+  position: relative;
+}
+
+.breadcrumbs li a { 
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumbs li::before{
+  content: '';
+  position: absolute;
+  top: .9em;
+  left: -4em;
+  width: 4em;
+  height: .2em;
+  background: #0aaca7;
+  z-index: -1;
+}
+
+
+.breadcrumbs li:first-child::before {
+  display: none;
+}
+
+.breadcrumbs .active {
+  background: #0aaca7;
+}
+
+.breadcrumbs .active ~ li {
+  background: #0aaca7;
+}
+
+.breadcrumbs .active ~ li::before {
+  background: #0aaca7;
+}
+
 
 
 /* START NAV RULES */
@@ -570,7 +618,7 @@ p {
     color: whitesmoke;
     padding: 40px;
 }
-.informations > p,h3{
+.informations > p h3{
     padding-left: 40px;
 }
 .buton{

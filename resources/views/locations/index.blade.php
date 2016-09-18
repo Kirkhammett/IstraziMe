@@ -2,6 +2,25 @@
 
 @section('content')
     <div class="container">
+        <span class="breadcrumbs">
+            @for($i = 0; $i <= count(Request::segments()); $i++)
+
+            @if($i == 0 )
+            <li><a href="/">Дома</a></li>
+            @continue
+            @endif
+
+            @if($i == 1)
+            <li><a href="{{URL::to('/' . Request::segment($i)) }}"> Локации</a></li>
+            @continue
+            @endif
+
+            <li>
+              <a href="{{ URL::to('/locations/' . Request::segment($i)) }}">{{$location->name}}</a>
+          </li>
+
+          @endfor
+      </span>
         <div class="row" style="font-family: mountain-font">
             <div class="col-md-12 text-center">
                 <h2>Локалитети</h2>
