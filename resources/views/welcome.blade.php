@@ -54,63 +54,63 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="">
-
-                            <input type="email" class="form-control" id="exampleInputEmail3"
-                                   placeholder="Име">
-
-                            <input type="email" class="form-control" id="exampleInputEmail3"
-                                   placeholder="Email адреса">
-
-                            <input type="email" class="form-control" id="exampleInputEmail3"
-                                   placeholder="Телефон">
-
-                            <textarea class="form-control txtarea " rows="8" style="width:635px;"
-                                      placeholder="Порака"></textarea>
-
-
-                            <a class="btn btn-primary buton2 btn-lg" href="mailto:contact@istrazime.com"
-                               style="text-decoration:none;margin-left:180px;" target="_top"> Испрати </a>
-
+                        <div class="row" style="margin-bottom: 2%">
+                            <div class="col-md-4">
+                                <input type="email" class="form-control" id="exampleInputEmail3"
+                                       placeholder="Име">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="email" class="form-control" id="exampleInputEmail3"
+                                       placeholder="Email адреса">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="email" class="form-control" id="exampleInputEmail3"
+                                       placeholder="Телефон">
+                            </div>
 
                         </div>
+                        <textarea class="form-control txtarea " rows="8" style="width:100%;"
+                                  placeholder="Порака"></textarea>
 
+                        <a class="btn btn-primary buton2 btn-lg" href="mailto:contact@istrazime.com"
+                           style="text-decoration:none;margin-left: 85%;margin-top: 2%;" target="_top"> Испрати </a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <br>
+        <br>
 
-            <h2 class="text-center">ПРЕПОРАКИ</h2>
-            <hr class="hr-class4">
-            <br>
-            <div classs="container">
-                <div class="col-md-4">
-                    <img src="{{URL::asset('/src/img/navodnici2.png')}}" height="40px" width="40px">
-                    <p class="p-imp"> So mesmerizing and unique, never have I thought I'd be so amazed by this
-                        wonderfull
-                        place. </p>
-                    <p class="p-imp2"><i> Szymon Tuta </i> за <b> Стоби </b></p>
-                </div>
-                <div class="col-md-4">
-                    <img src="{{URL::asset('/src/img/navodnici2.png')}}" height="40px" width="40px">
-                    <p class="p-imp"> Surreal beauty and nature. Make sure to visit Kokino and bring your
-                        camera, you
-                        won't
-                        regret it trust me! </p>
-                    <p class="p-imp2"><i> Anna Maric </i> за <b> Кокино </b></p>
-                </div>
-                <div class="col-md-4">
-                    <img src="{{URL::asset('/src/img/navodnici2.png')}}" height="40px" width="40px">
-                    <p class="p-imp"> Macedonia has a such interesting history. It felt like a trip back to
-                        those
-                        ancient
-                        times..</p>
-                    <p class="p-imp2"><i> Stjepan P. </i> за <b> Хераклеја </b></p>
-                </div>
+        <h2 class="text-center">ПРЕПОРАКИ</h2>
+        <hr class="hr-class4">
+        <br>
+        <div classs="container">
+            <div class="col-md-4">
+                <img src="{{URL::asset('/src/img/navodnici2.png')}}" height="40px" width="40px">
+                <p class="p-imp"> So mesmerizing and unique, never have I thought I'd be so amazed by this
+                    wonderfull
+                    place. </p>
+                <p class="p-imp2"><i> Szymon Tuta </i> за <b> Стоби </b></p>
             </div>
-            <br>
-            <br>
-            <br>
-            <div class="push2"></div>
+            <div class="col-md-4">
+                <img src="{{URL::asset('/src/img/navodnici2.png')}}" height="40px" width="40px">
+                <p class="p-imp"> Surreal beauty and nature. Make sure to visit Kokino and bring your
+                    camera, you
+                    won't
+                    regret it trust me! </p>
+                <p class="p-imp2"><i> Anna Maric </i> за <b> Кокино </b></p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{URL::asset('/src/img/navodnici2.png')}}" height="40px" width="40px">
+                <p class="p-imp"> Macedonia has a such interesting history. It felt like a trip back to
+                    those
+                    ancient
+                    times..</p>
+                <p class="p-imp2"><i> Stjepan P. </i> за <b> Хераклеја </b></p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="push2"></div>
 @endsection

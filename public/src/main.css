@@ -627,6 +627,7 @@ p {
     src: url(fonts/KenzoTangeSans-Demo.ttf);
 }
 
-.myClass{
+.myClass .form-control{
     display: inline;
+    margin-top: 1%;
 }
