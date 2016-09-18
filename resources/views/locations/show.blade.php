@@ -61,7 +61,7 @@
         <div class="row info-row">
             <div class="col-md-12">
                 <div class="info-class info-class-mobile ">
-                    <h3 class="text-center h-class" >Информации
+                    <h3 class="text-center h-class" style="padding-left: 0" >Информации</h3>
                     <h4 class="text-center h-class"> {{ $location->name }} </h4>
                     <hr class="hr-class2"></h3>
                     <p class="information-p " style="color: white" >
@@ -138,7 +138,7 @@
 
         <section class="row posts">
             <div class="col-md-6 col-md-offset-3 inner-kom">
-                <header><h3 class="text-center h-class" style="color: #2C2C2C">Коментари</h3></header>
+                <header><h3 class="text-center h-class" style="color: #2C2C2C; padding-left: 0">Коментари</h3></header>
                 <hr class="hr-class3">
                 <br>
                 @if ( !$location->comments->count() )
