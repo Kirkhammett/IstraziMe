@@ -2,7 +2,13 @@
 
 @section('content')
     <div class="container">
-    <h2>Локалитети</h2>
+        <div class="row" style="font-family: mountain-font">
+            <div class="col-md-12 text-center">
+                <h2>Локалитети</h2>
+                <hr class="hr-class7">
+                <br><br>
+            </div>
+        </div>
 
     @if ( !$locations->count() )
         You have no locations.
