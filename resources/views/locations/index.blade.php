@@ -11,7 +11,7 @@
             @endif
 
             @if($i == 1)
-            <li><a href="{{URL::to('/' . Request::segment($i)) }}"> Локации</a></li>
+            <li><a href="{{URL::to('/' . Request::segment($i)) }}"> Локалитети</a></li>
             @continue
             @endif
 

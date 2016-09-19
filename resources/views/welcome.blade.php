@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class=" landing container-fluid">
+    <div class="landing container-fluid">
 
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="text-center">
                 <h1 class="title-landing title-landing-resp"> Истражете ги убавините на Македонија </h1>
             </div>
         </div>
@@ -17,19 +17,18 @@
             повеќе информации и посетете некое ново место денес!
             <br>
             <br>
-            <button class="btn btn-primary btn-lg buton text-center"> Истражувај</button>
+            <a href="{{ URL::to('/locations') }}" class="btn btn-primary btn-lg buton text-center"> Истражувај</a>
     </div>
     <br>
 
     <div class="container">
 
         <div class="row">
-
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2 class="text-center">АДРЕСА</h2>
-
+                        <hr class="hr-class6">
                     </div>
                 </div>
 
@@ -48,7 +47,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="text-center">КОНТАКТ</h2>
-                        <hr class="hr-class6" style="width: 50%; margin-left: 25%; margin-right: 0">
+                        <hr class="hr-class6">
                     </div>
                 </div>
 
@@ -69,11 +68,11 @@
                             </div>
 
                         </div>
-                        <textarea class="form-control txtarea " rows="8" style="width:100%;"
+                        <textarea class="form-control " rows="8" style="width:100%;"
                                   placeholder="Порака"></textarea>
 
                         <a class="btn btn-primary buton2 btn-lg" href="mailto:contact@istrazime.com"
-                           style="text-decoration:none;margin-left: 85%;margin-top: 2%;" target="_top"> Испрати </a>
+                           style="text-decoration:none;margin-top: 2%;" target="_top"> Испрати </a>
                     </div>
                 </div>
             </div>

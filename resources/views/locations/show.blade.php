@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="envelop">
-                <span class="breadcrumbs">
+                <div class="breadcrumbs">
                     @for($i = 0; $i <= count(Request::segments()); $i++)
 
                     @if($i == 0 )
@@ -13,7 +13,7 @@
                     @endif
 
                     @if($i == 1)
-                    <li><a href="{{URL::to('/' . Request::segment($i)) }}"> Локации</a></li>
+                    <li><a href="{{URL::to('/' . Request::segment($i)) }}"> Локалитети</a></li>
                     @continue
                     @endif
 
@@ -22,7 +22,7 @@
                   </li>
 
                   @endfor
-              </span>
+              </div>
                 <div id="carousel-example-generic"class="carousel slide " data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
